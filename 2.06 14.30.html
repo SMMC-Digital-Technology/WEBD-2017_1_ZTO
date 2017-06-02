@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>ZTO</title>
+</head>
+
+<body id="all">
+    <header>
+        <title>Zabututi Taxation Office</title>
+        <p class="acronym">ZTO</p>
+        <hr class="hr">
+        <p class="organisation">Government of Zabututi</p>
+        <p class="function">Taxation Office</p>
+        <img src="flags.png" alt="flags" class="flags_img">
+        <img src="white.png" alt="white" class="white_fill">
+        <div class="navbar">
+            <div class="navbar_content">
+                <a href="ZTO.html" class="home_page">Home</a>
+                <div class="dropdown">
+                    <div class="dropdown_menu">
+                        <div class="dropdown_links">
+                            <a href="ZTO.html" class="navbar_links">Individuals</a>
+                            <a href="ZTO.html" class="navbar_links">Business</a>
+                            <a href="ZTO.html" class="navbar_links">About</a>
+                        </div>
+                        <img src="dropdown_img.png" alt="dropdown menu" class="dropdown_img">
+                        <!-- public domain source https://commons.wikimedia.org/wiki/File:Symbol_rain_64.svg -->
+                    </div>
+                </div>
+                <a href="cart.html"><img src=cart_img.png alt="cart image" class="cart_img"></a>
+            </div>
+        </div>
+        <div class="navbar_fixed">
+            <a href="home_page.html" class="home_page_f">Home</a>
+            <div class="dropdown_f">
+                <div class="dropdown_menu_f">
+                    <div class="dropdown_links_f">
+                        <a href="product_page1.html" class="navbar_links_f">View Products</a>
+                        <a href="about.html#con" class="navbar_links_f">Contact</a>
+                        <a href="about.html" class="navbar_links_f">About</a>
+                    </div>
+                    <img src="dropdown_img.png" alt="dropdown menu" class="dropdown_img_f">
+                    <!-- public domain source https://commons.wikimedia.org/wiki/File:Symbol_rain_64.svg -->
+                </div>
+            </div>
+            <a href="cart.html"><img src=cart_img.png alt="cart image" class="cart_img_f"></a>
+        </div>
+    </header>
+
+    <div class="calculation">
+        <label>tax calculation:
+            <input type="number" placeholder="income" id="input" min="0" >
+            <!-- The onInput attributes indicates the function to run when the value of the input is changed. The min and max attributes set the smallest and largest values the input can hold. The step attribute indicates how much the buttons change the value. -->
+        </label>s
+        <button id="submit" onclick="buttonPress()">calculate</button>
+
+        <script src="taxCalculation.js"></script>
+        <h1 id="tax"></h1>
+    </div>
+    
+</body>
+
+</html>
