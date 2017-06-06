@@ -1,0 +1,431 @@
+@media screen and (max-width: 887px) {
+    div.dropdown_links {
+        /*Setup dropdown links on navigation bar*/
+        display: none;
+        position: absolute;
+        left: 215.2px;
+    }
+    .dropdown_img {
+        /*Set the three dot dropdown image*/
+        width: 56.3px;
+        z-index: 10;
+        visibility: visible;
+        background-color: cadetblue;
+    }
+    div.dropdown_menu:hover div.dropdown_links {
+        /*Make the dropdown image do stuff when hovering*/
+        display: flex;
+        flex-direction: column;
+        width: 258px;
+    }
+    .dropdown_menu {
+        /* this section of css is to define the area in which, when hovered over, the navbar comes down */
+        height: 50px;
+        width: 215.9px;
+    }
+    .dropdown_menu_f {
+        /* this section of css is to define the area in which, when hovered over, the navbar comes down */
+        height: 50px;
+        width: 217px;
+    }
+    .dropdown_img:hover {
+        /*Change colour when hovering*/
+        background-color: darkcyan;
+    }
+    div.dropdown_links_f {
+        /*Setup the div for the dropdown links*/
+        display: none;
+        position: absolute;
+        left: 215.2px;
+    }
+    .dropdown_img_f {
+        /*Setup the three dot dropdown image on the fixed navigation bar*/
+        width: 56.3px;
+        z-index: 10;
+        visibility: visible;
+        background-color: cadetblue;
+    }
+    div.dropdown_menu_f:hover div.dropdown_links_f {
+        /*Change stuff when hovering on the fixed navigation bar dropdown image*/
+        display: flex;
+        flex-direction: column;
+        width: 258px;
+    }
+    .dropdown_img_f:hover {
+        /*Change colour when hovering*/
+        background-color: darkcyan;
+    }
+}
+
+@media screen and (min-width: 887px) {
+    /*Make the three dot dropdown image available when screen is small enough*/
+    .dropdown_img {
+        visibility: hidden;
+        width: 0px;
+    }
+    .dropdown_img_f {
+        visibility: hidden;
+        width: 0px;
+    }
+}
+
+.navbar {
+    /*Setup navigation bar*/
+    overflow: visible;
+    background-color: cadetblue;
+    position: absolute;
+    top: -25vw;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    display: block;
+    list-style-type: disc;
+    margin-top: 41.2vw;
+    z-index: 10;
+    margin-bottom: 10px;
+    border-bottom-color: black;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    border-top-color: black;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.navbar_fixed {
+    /*Setup the fixed navigation bar*/
+    overflow: visible;
+    background-color: cadetblue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    display: block;
+    list-style-type: disc;
+    z-index: 4;
+    border-bottom-color: black;
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-top-color: black;
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.navbar_links {
+    /*Setup the links on the navigation bar*/
+    display: block;
+    float: left;
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+    padding-left: 41px;
+    padding-right: 41px;
+    text-decoration: none;
+    font-size: 30px;
+    z-index: 5;
+    padding-top: 12.8px;
+    padding-bottom: 13px;
+}
+
+.navbar_links_f {
+    /*Setup the links on the fixed navigation bar*/
+    display: block;
+    float: left;
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+    padding-left: 41px;
+    padding-right: 41px;
+    text-decoration: none;
+    font-size: 30px;
+    z-index: 5;
+    padding-top: 12.8px;
+    padding-bottom: 13px;
+}
+
+.home_page:hover {
+    /*Change colour when the homepage is hovered over*/
+    background-color: darkcyan;
+    color: black;
+}
+
+.home_page {
+    /*Setup the homepage button on the navigation bar*/
+    display: block;
+    float: left;
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+    padding-left: 41px;
+    padding-right: 41px;
+    text-decoration: none;
+    font-size: 30px;
+    padding-top: 8.8px;
+    padding-bottom: 13px;
+}
+
+.home_page_f {
+    /*Setup the homepage button on the fixed navigation bar*/
+    display: block;
+    float: left;
+    background-color: cadetblue;
+    color: black;
+    text-align: center;
+    padding-left: 41px;
+    padding-right: 41px;
+    text-decoration: none;
+    font-size: 30px;
+    padding-top: 8.8px;
+    padding-bottom: 13px;
+}
+
+.home_page_f:hover {
+    /*Change colour when hovered over the homepage button on the fixed navigation bar*/
+    background-color: darkcyan;
+    color: black;
+}
+
+.navbar_links:hover {
+    /*Change the colour when hovered over the links on the navigation bar*/
+    background-color: darkcyan;
+    color: black;
+}
+
+.navbar_links_f:hover {
+    /*Change the colour when hovered over the links on the fixed navigation bar*/
+    background-color: darkcyan;
+    color: black;
+}
+
+.acronym {
+    /*Setup acronym (ZTO)*/
+    position: absolute;
+    top: -1vw;
+    left: 1vw;
+    z-index: 10;
+    width: 29vw;
+    height: 13.7vw;
+    padding-top: 0.5vw;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    font-size: 7vw;
+}
+
+.organisation {
+    /*Setup the words 'Government of Zabututi*/
+    z-index: 9;
+    font-size: 2vw;
+    color: black;
+    width: 29vw;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 6vw;
+    left: 13vw;
+}
+
+.function {
+    /*Setup the words 'Taxation Office'*/
+    z-index: 9;
+    font-size: 2vw;
+    color: black;
+    width: 29vw;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 8.5vw;
+    left: 13vw;
+}
+
+.flags_img {
+    /*Setup the line of flags at the top*/
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 6;
+}
+
+.top_line {
+    /*The line at the top... otherwise know as a sorta box...*/
+    position: absolute;
+    top: 9.75vw;
+    width: 21vw;
+    left: 17vw;
+    border-color: black;
+    z-index: 6;
+}
+
+.white_fill {
+    /*Setup white fill for the top of the screen*/
+    position: absolute;
+    width: 100vw;
+    height: 16.2vw;
+    top: 0vw;
+    left: 0;
+    z-index: 5;
+}
+
+.graph {
+    /*Setup graph*/
+    position: absolute;
+    top: 80vw;
+    left: 30vw;
+    right: 30vw;
+}
+
+.tax_title {
+    /*Setup the tax calculator title*/
+    position: absolute;
+    top: 25vw;
+    left: 30vw;
+    width: 59vw;
+    font-size: 7vw;
+}
+
+.input {
+    /*Setup the input for the tax calculator*/
+    position: absolute;
+    top: 20vw;
+    left: -20vw;
+    width: 40vw;
+    font-size: 4vw;
+}
+
+.button {
+    /*Setup the button for the tax calculator*/
+    position: absolute;
+    top: 60vw;
+    left: 5vw;
+    width: 90vw;
+    height: 7vw;
+    font-size: 5vw;
+    color: black;
+    background: cadetblue;
+    border-bottom-color: black;
+    border-right-color: black;
+    border-top-color: white;
+    border-left-color: white;
+}
+
+.button:active {
+    background: darkcyan;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-top-color: black;
+    border-left-color: black;
+}
+
+.tax {
+    /*Setup tax output for tax calculator*/
+    position: absolute;
+    top: 17.6vw;
+    left: 30vw;
+    font-size: 4vw;
+}
+
+.tax_title_line {
+    /*Setup line under 'Tax Calculator'*/
+    position: absolute;
+    top: 5vw;
+    width: 42vw;
+    left: 0vw;
+    border-color: black;
+}
+
+.tax_subtitle_line {
+    /*Setup line above input and output*/
+    position: absolute;
+    top: 14vw;
+    width: 80vw;
+    left: -20vw;
+    border-color: black;
+}
+
+.income_subtitle {
+    /*Setup tax subtitle*/
+    position: absolute;
+    top: 9vw;
+    left: -20vw;
+    font-size: 4vw;
+}
+
+.tax_subtitle {
+    /*Setup income subtitle*/
+    position: absolute;
+    top: 9vw;
+    left: 30vw;
+    font-size: 4vw;
+}
+
+footer {
+    /*Setup footer*/
+    position: absolute;
+    top: 110vw;
+    height: 10vw;
+    width: 100vw;
+    background: cadetblue;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    border-top: 4px solid black;
+    margin-top: 10%;
+    font-size: 2vw;
+}
+
+hr {
+    /*Make all hr lines completely black*/
+    background: black;
+}
+
+nav {
+    /*Set up footer bar*/
+    background: cadetblue;
+    width: 100%;
+    font-size: 1em;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    /*Set up footer bar*/
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    /*Set up footer bar*/
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    margin: 5px;
+}
+
+nav a {
+    /*Set up footer bar*/
+    display: inline-block;
+    text-align: center;
+    background: cadetblue;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    border: 2px black;
+    border-radius: 100px;
+}
+
+nav a:hover {
+    /*When hover, turn background darker*/
+    background: darkcyan;
+}
+
+.government {
+    /*Setup offical statement at bottom of footer*/
+    font-size: 1vw;
+    padding: 0;
+    text-align: left;
+    margin-left: 7vw;
+}
