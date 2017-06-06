@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--Webpage setup-->
+<html lang="en">
+    <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <title>ZTO</title>
+</head>
+
+<body id="all">
+    <header>
+        <!--Top left words-->
+        <title>Zabututi Taxation Office</title>
+        <p class="acronym">ZTO</p>
+        <!--Top left line-->
+        <hr class="top_line">
+        <!--More top left words-->
+        <p class="organisation">Government of Zabututi</p>
+        <p class="function">Taxation Office</p>
+        <!--Flag banner at top-->
+        <img src="flags.png" alt="flags" class="flags_img">
+        <!--White fill cover at top above navigation bar-->
+        <img src="white.png" alt="white" class="white_fill">
+        <!--Navigation bar-->
+        <div class="navbar">
+            <div class="navbar_content">
+                <!--Homepage button-->
+                <a href="ZTO.html" class="home_page">Home</a>
+                <div class="dropdown">
+                    <div class="dropdown_menu">
+                        <div class="dropdown_links">
+                            <!--Dropdown buttons-->
+                            <a href="ZTO.html" class="navbar_links">Individuals</a>
+                            <a href="ZTO.html" class="navbar_links">Business</a>
+                            <a href="ZTO.html" class="navbar_links">About</a>
+                        </div>
+                        <!--The 3 dot dropdown image-->
+                        <img src="dropdown_img.png" alt="dropdown menu" class="dropdown_img">
+                        <!-- public domain source https://commons.wikimedia.org/wiki/File:Symbol_rain_64.svg -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--The fixed navigation bar-->
+        <div class="navbar_fixed">
+            <!--The fixed homepage button-->
+            <a href="home_page.html" class="home_page_f">Home</a>
+            <div class="dropdown_f">
+                <div class="dropdown_menu_f">
+                    <div class="dropdown_links_f">
+                        <!--The fixed dropdown buttons-->
+                        <a href="product_page1.html" class="navbar_links_f">Individiuals</a>
+                        <a href="about.html#con" class="navbar_links_f">Business</a>
+                        <a href="about.html" class="navbar_links_f">About</a>
+                    </div>
+                    <!--The fixed 3 dot dropdown image-->
+                    <img src="dropdown_img.png" alt="dropdown menu" class="dropdown_img_f">
+                    <!-- public domain source https://commons.wikimedia.org/wiki/File:Symbol_rain_64.svg -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--The tax graph-->
+    <div id="graph" class="graph">
+    </div>
+
+    <!--The tax calculator-->
+    <label class="tax_title">Tax Calculator
+            <hr class="tax_title_line">
+            <h2 class="income_subtitle">Income</h2>
+            <h2 class="tax_subtitle">Tax</h2>
+            <hr class="tax_subtitle_line">
+            <input class="input" type="number" placeholder="Income" id="input" min="0" >
+            <!-- The onInput attributes indicates the function to run when the value of the input is changed. The min and max attributes set the smallest and largest values the input can hold. The step attribute indicates how much the buttons change the value. -->
+        <h1 class="tax" id="tax"></h1>
+        </label>
+    <!--The calculate Button-->
+    <button class="button" id="submit" onclick="buttonPress()">Calculate</button>
+
+    <!--Load the plot js and calculation js-->
+    <script src="plotly-latest.min.js"></script>
+    <script src="taxCalculation.js"></script>
+
+</body>
+
+<footer>
+    <nav>
+        <ul>
+            <!---Footer links--->
+            <li><a href="ZTO.html">Policy</a></li>
+            <li><a href="ZTO.html">Rights</a></li>
+            <li><a href="ZTO.html">About</a></li>
+            <li><a href="ZTO.html">Tax</a></li>
+        </ul>
+    </nav>
+    <p class="government">Offical Government of Zabututi</p>
+</footer>
+    
+</html>
