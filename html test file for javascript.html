@@ -3,8 +3,13 @@
     <head>
         <meta charset="utf-8">
         <title>tax calc test</title>
+        
+
+        
     </head>
     <body id="all">
+        <div id="graph" class="graph">
+        </div>
         
         <label>tax calculation:
             <input type="number" placeholder="income" id="input" min="0" >
@@ -12,6 +17,7 @@
         </label>
         <button id="submit" onclick="buttonPress()">calculate</button>
         
+        <script src="plotly-latest.min.js"></script>
         <script src="taxCalculation.js"></script>
         <h1 id="tax"></h1>
     </body>
