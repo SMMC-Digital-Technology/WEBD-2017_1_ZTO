@@ -50,6 +50,7 @@ for (i = 0; i < myX.length; i += 1) {
 for (i = 0; i < myX.length; i += 1) {
     graphTextPostTaxIncome[i] = "<br>If income is $" + myX[i] + ",<br>then" + incomeAfterTax[i];
 }
+
 function drawGraph() {
     var taxValue = {
         x: myX,
@@ -57,9 +58,9 @@ function drawGraph() {
         text: graphTextTax,
         type: 'scatter',
         mode: 'lines',
-        name: 'Tax in<br>Relation<br>to income',
+        name: 'Income to Tax',
         line: {
-            color: 'rgba(8, 0, 255, 0.54)',
+            color: 'rgba(8, 255, 10, 0.9)',
             size: 2
         }
     };
@@ -69,7 +70,7 @@ function drawGraph() {
         text: graphTextPostTaxIncome,
         type: 'scatter',
         mode: 'lines',
-        name: 'Income After Tax',
+        name: 'Income Post Tax',
         line: {
             color: 'rgba(89, 89, 89, 0.8)',
             size: 2
@@ -80,11 +81,37 @@ function drawGraph() {
         title: "Zabututi Income to Tax Ratio Graph",
         yaxis: {
             title: "Tax",
-            zerolinewidth: 0.5
+            zerolinewidth: 1,
+            showticklabels: true,
+            linecolor: 'rgb(0, 0, 0)',
+            linewidth: 2,
+            autotick: true,
+            ticks: 'outside',
+            tickcolor: 'rgb(0, 0, 0)',
+            ticklen: 9,
+            tickwidth: 2,
+            tickfont: {
+                family: 'Trebuchet MS',
+                size: 20,
+                color: 'rgb(0, 100, 255)'
+            }
         },
         xaxis: {
             title: "Income",
-            zerolinewidth: 0.5
+            zerolinewidth: 2,
+            showticklabels: true,
+            linecolor: 'rgb(0, 0, 0)',
+            linewidth: 2,
+            autotick: true,
+            tick: 'inside',
+            tickcolor: 'rgb(0, 0, 0)',
+            ticklen: 9,
+            tickwidth: 2,
+            tickfont: {
+                family: 'Trebuchet MS',
+                size: 20,
+                color: 'rgb(0, 100, 255)'
+            }
         },
         width: 600,
         height: 500
