@@ -5,16 +5,16 @@ var thresh2 = 52501;
 var thresh3 = 113001;
 var thresh4 = 184501;
 var graphIncome; /*a seperate variable used in calculating the Y variable of the graph*/
-var graphTaxPaid;
-var myY = [];
-var myX = [];
-var incomeAfterTaxValue = [];
-var incomeAfterTax = [];
-var graphTextTax = [];
-var graphTextPostTaxIncome = [];
-var width = 0;
-var i = 0;
-var myYForText = [];
+var graphTaxPaid;/*used as a variable to push the*/
+var taxYValue = [];/*variable use as tax Y coordinates*/
+var myX = [];/*universal graph x coordinates*/
+var incomeAfterTaxYValue = [];/*the income after tax deductions as a number*/
+var incomeAfterTax = [];/*relevant text added to the pure numerical value above*/
+var graphTextTax = [];/*variable for the text shown on the income to tax plot when hovering over the graph*/
+var graphTextPostTaxIncome = [];/*variable for the text show on the income post tax plot*/
+var width = 0;/*variable used in a loop to add to the x coordinate*/
+var i = 0;/*variable use as a counter in the loops*/
+var taxYValueForText = [];/*variable for the tax value without the cents decimal places*/
 for (i = 0; i < 250001; i += 100) {
     myX.push(width);
     width += 100;
@@ -33,40 +33,45 @@ for (i = 0; i < 250001; i += 100) {
         graphTaxPaid = 30490 + (graphIncome - (thresh4 - 1)) / 100 * 36;
     }
     graphTaxPaid = graphTaxPaid.toFixed(2);
-    myY.push(graphTaxPaid);
+    taxYValue.push(graphTaxPaid);
 }
+/*the following loop creates an array that is the tax value without the decimal places*/
 for (i = 0; i < myX.length; i += 1) {
-    myYForText.push(myY[i].slice(0, myY[i].length - 3))
+    taxYValueForText.push(taxYValue[i].slice(0, taxYValue[i].length - 3))
 }
+/*the following loop creates an array that is income minus tax, which is income after tax deduction*/
 for (i = 0; i < myX.length; i += 1) {
-    incomeAfterTaxValue.push(myX[i] - myY[i]);
+    incomeAfterTaxYValue.push(myX[i] - taxYValue[i]);
 }
-for (i = 0; i < incomeAfterTaxValue.length; i += 1) {
-    incomeAfterTax[i] = " income after<br>tax is $" + incomeAfterTaxValue[i];
+/*the following loop creates an array that is the post taxation income plus some text which explains it, this is used later for the text on hover values*/
+for (i = 0; i < incomeAfterTaxYValue.length; i += 1) {
+    incomeAfterTax[i] = " income after<br>tax is $" + incomeAfterTaxYValue[i];
 }
+/*the following loop creates an array for the text shown on the 'income to tax' plot*/
 for (i = 0; i < myX.length; i += 1) {
-    graphTextTax[i] = "<br>If income is $" + myX[i] + ",<br>then tax is $" + myYForText[i];
+    graphTextTax[i] = "<br>If income is $" + myX[i] + ",<br>then tax is $" + taxYValueForText[i];
 }
+/*the following loop adds some more text to the post tax income, this is the final text show on hover for the 'income post tax' plot*/
 for (i = 0; i < myX.length; i += 1) {
     graphTextPostTaxIncome[i] = "<br>If income is $" + myX[i] + ",<br>then" + incomeAfterTax[i];
 }
-
+/*the following function determines how the graph is drawn*/
 function drawGraph() {
-    var taxValue = {
-        x: myX,
-        y: myY,
-        text: graphTextTax,
-        type: 'scatter',
-        mode: 'lines',
-        name: 'Income to Tax',
+    var taxValue /*data and basic formating of the 'income to tax' plot*/= {
+        x: myX, /*x coordinate for the 'income to tax' plot*/ 
+        y: taxYValue, /*x coordinate for the 'income to tax' plot coordinate for the 'income to tax' plot*/
+        text: graphTextTax,/*text show on hover for the 'income to tax' plot*/
+        type: 'scatter',/*states the style of the plot*/
+        mode: 'lines', /*states that only the lines are show on the graph and not the points*/
+        name: 'Income to Tax', /*gives the plot a title which is seen in the key*/
         line: {
-            color: 'rgba(8, 255, 10, 0.9)',
-            size: 2
+            color: 'rgba(8, 255, 10, 0.9)', /*colour of the actual line used on the graph for the 'income to tax' plot*/
+            size: 2/*detemines the line width*/
         }
     };
     var incomeAfterTaxGraph = {
         x: myX,
-        y: incomeAfterTaxValue,
+        y: incomeAfterTaxYValue,
         text: graphTextPostTaxIncome,
         type: 'scatter',
         mode: 'lines',
