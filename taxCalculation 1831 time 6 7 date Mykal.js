@@ -79,41 +79,76 @@ function drawGraph() {
     var data = [taxValue, incomeAfterTaxGraph];
     layout = {
         title: "Zabututi Income to Tax Ratio Graph",
+        x: .5,
         yaxis: {
+            domain: [0, 1],
+            range: [-5000, 200000],
+            titlefont: {
+                family: 'Trebuchet MS',
+                size: 20,
+                color: 'rgb(80, 80, 80)'
+            },
+            exponentformat: 'none',
+            zeroline: false,
             title: "Tax",
-            zerolinewidth: 1,
             showticklabels: true,
             linecolor: 'rgb(0, 0, 0)',
+            linewidth: 2,
+            lines: "outside",
+            autotick: true,
+            zeroline: false,
+            ticks: 'outside',
+            tickcolor: 'rgb(0, 0, 0)',
+            ticklen: 5,
+            tickwidth: 2,
+            tickfont: {
+                family: 'Trebuchet MS',
+                size: 15,
+                color: 'rgb(0, 100, 255)'
+            },
+            gridcolor: 'rgb(248, 248, 248)',
+            gridwidth: '2',
+            anchor: 'free'
+        },
+        margin: {
+            autoexpand: false,
+            l: 100,
+            r: 200,
+            t: 100,
+            b: 80,
+            pad: 0,
+            autoexpand: false
+        },
+        xaxis: {
+            domain: [0, 1],
+            range: [0, 250000],
+            titlefont: {
+                family: 'Trebuchet MS',
+                size: 20,
+                color: 'rgb(80, 80, 80)'
+            },
+            exponentformat: 'none',
+            zeroline: false,
+            tickangle: 330,
+            title: "Income",
+            showticklabels: true,
+            linecolor: 'rgb(0,0,0)',
             linewidth: 2,
             autotick: true,
             ticks: 'outside',
-            tickcolor: 'rgb(0, 0, 0)',
-            ticklen: 9,
+            tickcolor: 'rgb(0,0,0)',
+            ticklen: 5,
             tickwidth: 2,
             tickfont: {
                 family: 'Trebuchet MS',
-                size: 20,
-                color: 'rgb(0, 100, 255)'
-            }
+                size: 15,
+                color: 'rgb(0, 100, 255)',
+            },
+            gridcolor: 'rgb(248, 248, 248)',
+            gridwidth: '2',
+            anchor: 'free',
         },
-        xaxis: {
-            title: "Income",
-            zerolinewidth: 2,
-            showticklabels: true,
-            linecolor: 'rgb(0, 0, 0)',
-            linewidth: 2,
-            autotick: true,
-            tick: 'inside',
-            tickcolor: 'rgb(0, 0, 0)',
-            ticklen: 9,
-            tickwidth: 2,
-            tickfont: {
-                family: 'Trebuchet MS',
-                size: 20,
-                color: 'rgb(0, 100, 255)'
-            }
-        },
-        width: 600,
+        width: 650,
         height: 500
     };
 
