@@ -12,13 +12,14 @@ var incomeAfterTaxYValue = [];/*the income after tax deductions as a number*/
 var incomeAfterTax = [];/*relevant text added to the pure numerical value above*/
 var graphTextTax = [];/*variable for the text shown on the income to tax plot when hovering over the graph*/
 var graphTextPostTaxIncome = [];/*variable for the text show on the income post tax plot*/
-var width = 0;/*variable used in a loop to add to the x coordinate*/
+var incomeForXValue = 0;/*variable used in a loop to add to the x coordinate*/
 var i = 0;/*variable use as a counter in the loops*/
 var taxYValueForText = [];/*variable for the tax value without the cents decimal places*/
-for (i = 0; i < 250001; i += 100) {
-    myX.push(width);
-    width += 100;
-    graphIncome = i;
+/*the following loop creates an array with the tax values of income every 100 dollars*/
+for (i = 0; i < 250001; i += 100/*adds 100 to the income counter every time the loop runs, essentially adding 100 dollars each time*/) {
+    myX.push(i);/*adds the 'i' variable to an array, it is essentially the income at that iteration of the loop*/
+    graphIncome = i;/*set variable used in the tax algorithm as the current income counter*/
+    /*lines 23 to 36 are explained in comments in lines 154 to 167*/
     if (graphIncome < thresh2) {
         if (graphIncome < thresh1) {
             graphTaxPaid = 0;
@@ -33,7 +34,7 @@ for (i = 0; i < 250001; i += 100) {
         graphTaxPaid = 30490 + (graphIncome - (thresh4 - 1)) / 100 * 36;
     }
     graphTaxPaid = graphTaxPaid.toFixed(2);
-    taxYValue.push(graphTaxPaid);
+    taxYValue.push(graphTaxPaid);/*adds tax for the particular income value to an array*/
 }
 /*the following loop creates an array that is the tax value without the decimal places*/
 for (i = 0; i < myX.length; i += 1) {
@@ -148,21 +149,21 @@ function drawGraph() {
 drawGraph();/*runs the above function which creates the graph*/
 
 function buttonPress() {
-    income = document.getElementById("input").value;
-    income = Number(income);
-    if (income < thresh2) {
-        if (income < thresh1) {
+    income = document.getElementById("input").value;/*sets the income variable as the value of the input box*/
+    income = Number(income);/*defines income as a number*/
+    if (income < thresh2) /*tax calculation starts at about the center income braket for efficiency, if income is less that bracket 2 go to line 155, otherwise go to line 160*/{
+        if (income < thresh1) /*if income is less than bracket 1 tax equals zero, otherwise tax equals equation on line 158*/{
             taxPaid = 0;
         } else {
             taxPaid = (income - (thresh1 - 1)) / 100 * 10;
         }
-    } else if (income < thresh3) {
+    } else if (income < thresh3) /*if income is less than bracket 3 tax equals equation on line 161, otherwise go to line 162*/{
         taxPaid = 3650 + (income - (thresh2 - 1)) / 100 * 16;
-    } else if (income < thresh4) {
+    } else if (income < thresh4) /*if income is less that bracket 4 tax equals equation on line 163, otherwise tax equals equation on line 165*/{
         taxPaid = 13330 + (income - (thresh3 - 1)) / 100 * 24;
     } else {
         taxPaid = 30490 + (income - (thresh4 - 1)) / 100 * 36;
     }
-    taxPaid = taxPaid.toFixed(2);
-    document.getElementById("tax").innerHTML = "$" + taxPaid;
+    taxPaid = taxPaid.toFixed(2);/*rounds the tax value to two decimal places, this is primarily to add zero/s onto numbers when necessary*/
+    document.getElementById("tax").innerHTML = "$" + taxPaid;/*outputs the result into the HTML with a dollar sign added before it*/
 }
