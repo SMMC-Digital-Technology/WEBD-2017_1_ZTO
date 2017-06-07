@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>tax calc test</title>
+        
+
+        
+    </head>
+    <body id="all">
+        <div id="graph" class="graph">
+        </div>
+        
+        <label>tax calculation:
+            <input type="number" placeholder="income" id="input" min="0" >
+            <!-- The onInput attributes indicates the function to run when the value of the input is changed. The min and max attributes set the smallest and largest values the input can hold. The step attribute indicates how much the buttons change the value. -->
+        </label>
+        <button id="submit" onclick="buttonPress()">calculate</button>
+        
+        <script src="plotly-latest.min.js"></script>
+        <script src="taxCalculation.js"></script>
+        <h1 id="tax"></h1>
+    </body>
+</html>
