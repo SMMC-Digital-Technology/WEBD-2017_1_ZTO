@@ -10,7 +10,7 @@
         width: 56.3px;
         z-index: 10;
         visibility: visible;
-        background-color: cadetblue;
+        background-color: darkturquoise;
     }
     div.dropdown_menu:hover div.dropdown_links {
         /*Make the dropdown image do stuff when hovering*/
@@ -25,7 +25,7 @@
     }
     .dropdown_img:hover {
         /*Change colour when hovering*/
-        background-color: darkcyan;
+        background-color: turquoise;
     }
 }
 
@@ -40,7 +40,7 @@
 .navbar {
     /*Setup navigation bar*/
     overflow: visible;
-    background-color: cadetblue;
+    background-color: darkturquoise;
     position: absolute;
     top: -25vw;
     width: 100%;
@@ -63,7 +63,7 @@
     /*Setup the links on the navigation bar*/
     display: block;
     float: left;
-    background-color: cadetblue;
+    background-color: darkturquoise;
     color: black;
     text-align: center;
     padding-left: 41px;
@@ -77,7 +77,7 @@
 
 .home_page:hover {
     /*Change colour when the homepage is hovered over*/
-    background-color: darkcyan;
+    background-color: turquoise;
     color: black;
 }
 
@@ -85,7 +85,7 @@
     /*Setup the homepage button on the navigation bar*/
     display: block;
     float: left;
-    background-color: cadetblue;
+    background-color: darkturquoise;
     color: black;
     text-align: center;
     padding-left: 41px;
@@ -98,7 +98,7 @@
 
 .navbar_links:hover {
     /*Change the colour when hovered over the links on the navigation bar*/
-    background-color: darkcyan;
+    background-color: turquoise;
     color: black;
 }
 
@@ -201,7 +201,7 @@
     height: 5vw;
     font-size: 3.5vw;
     color: black;
-    background: cadetblue;
+    background: darkturquoise;
     border-bottom-color: darkgray;
     border-bottom-width: .5vw;
     border-right-width: -0vw;
@@ -212,7 +212,7 @@
 
 .button:active {
     top: 60.25vw;
-    background: darkcyan;
+    background: turquoise;
     border-bottom-color: dimgray;
     border-bottom-width: .25vw;
 }
@@ -265,7 +265,7 @@ footer {
     top: 150vw;
     height: 10vw;
     width: 100vw;
-    background: cadetblue;
+    background: darkturquoise;
     padding-top: 2%;
     padding-bottom: 1%;
     border-top: 4px solid black;
@@ -280,7 +280,7 @@ hr {
 
 nav {
     /*Set up footer bar*/
-    background: cadetblue;
+    background: darkturquoise;
     width: 100%;
     font-size: 1em;
     left: 0;
@@ -307,7 +307,7 @@ nav a {
     /*Set up footer bar*/
     display: inline-block;
     text-align: center;
-    background: cadetblue;
+    background: darkturquoise;
     color: black;
     text-decoration: none;
     padding: 20px;
@@ -317,7 +317,7 @@ nav a {
 
 nav a:hover {
     /*When hover, turn background darker*/
-    background: darkcyan;
+    background: turquoise;
 }
 
 .government {
@@ -331,7 +331,7 @@ nav a:hover {
 .stuck {
     /*navbar when scrolled past to make sticky*/
     overflow: visible;
-    background-color: cadetblue;
+    background-color: darkturquoise;
     position: fixed;
     top: -41.2vw;
     width: 100%;
